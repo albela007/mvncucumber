@@ -1,14 +1,22 @@
 package com.fannie.step_definitions;
 
+import com.fannie.selenium.SeleniumFunctions;
+
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class login_step_definitions {
 
+	SeleniumFunctions sf = new SeleniumFunctions();
+	
+	
+	
 	@Given("^user is on sdettraining homepage$")
 	public void user_is_on_sdettraining_homepage() throws Throwable {
 		
+		sf.createDriver();
+		sf.ishomepageDisplayed();
 		System.out.println("user is executing code from..SDETtraining homepage..will come here ");
 	}
 
